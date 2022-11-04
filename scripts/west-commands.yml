@@ -1,0 +1,18 @@
+west-commands:
+  - file: scripts/west_commands/build.py
+    commands:
+      - name: build
+        class: Build
+        help: Compile an example application
+
+  - file: scripts/west_commands/test.py
+    commands:
+      - name: test
+        class: Test
+        help: Test an example application
+
+  - file: scripts/west_commands/package.py
+    commands:
+      - name: package
+        class: Package
+        help: Package an example application

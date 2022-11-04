@@ -1,0 +1,5 @@
+package-config:
+  input-patterns:
+    - '*.elf'
+    - '*.map'
+    - '*.junit.xml'

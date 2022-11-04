@@ -1,0 +1,31 @@
+# Example west-project manifest
+manifest:
+  defaults:
+    remote: origin
+
+  remotes:
+    - name: origin
+      url-base: https://github.com/thomasstenersen
+
+  projects:
+    - name: west-project-child
+      revision: main
+
+      # Side-by-side
+      path: west-modules/child
+
+      # Within
+      # path: west-project/west-modules/child
+
+    - name: "zephyr"
+      # NOTE: This is a hack to automatically get west to keep quiet about not
+      # having zehyr.base set.
+      groups:
+        - ignore
+
+  group-filter:
+    - -ignore
+
+  self:
+    path: west-project
+    west-commands: scripts/west-commands.yml
